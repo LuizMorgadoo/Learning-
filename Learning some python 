@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPtFcZ3xxSbevxytTp2q9Go"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qNJBABrI7IKS",
+        "outputId": "3538ec63-cccd-4890-c21b-8f1711a7e3c8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Selecione a operação:\n",
+            "1 - Somar\n",
+            "2 - Subtrair\n",
+            "3 - Multiplicar\n",
+            "4 - Dividir\n",
+            "Digite sua opção (1/2/3/4): 3\n",
+            "Digite o primeiro número: 17\n",
+            "Digite o segundo número: 25\n",
+            "Resultado:  425.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def somar(a, b):\n",
+        "    return a + b\n",
+        "\n",
+        "def subtrair(a, b):\n",
+        "    return a - b\n",
+        "\n",
+        "def multiplicar(a, b):\n",
+        "    return a * b\n",
+        "\n",
+        "def dividir(a, b):\n",
+        "    if b != 0:\n",
+        "        return a / b\n",
+        "    else:\n",
+        "        return \"Erro: divisão por zero!\"\n",
+        "\n",
+        "print(\"Selecione a operação:\")\n",
+        "print(\"1 - Somar\")\n",
+        "print(\"2 - Subtrair\")\n",
+        "print(\"3 - Multiplicar\")\n",
+        "print(\"4 - Dividir\")\n",
+        "\n",
+        "opcao = input(\"Digite sua opção (1/2/3/4): \")\n",
+        "\n",
+        "num1 = float(input(\"Digite o primeiro número: \"))\n",
+        "num2 = float(input(\"Digite o segundo número: \"))\n",
+        "\n",
+        "if opcao == \"1\":\n",
+        "    resultado = somar(num1, num2)\n",
+        "    print(\"Resultado: \", resultado)\n",
+        "elif opcao == \"2\":\n",
+        "    resultado = subtrair(num1, num2)\n",
+        "    print(\"Resultado: \", resultado)\n",
+        "elif opcao == \"3\":\n",
+        "    resultado = multiplicar(num1, num2)\n",
+        "    print(\"Resultado: \", resultado)\n",
+        "elif opcao == \"4\":\n",
+        "    resultado = dividir(num1, num2)\n",
+        "    print(\"Resultado: \", resultado)\n",
+        "else:\n",
+        "    print(\"Opção inválida!\")"
+      ]
+    }
+  ]
+}
